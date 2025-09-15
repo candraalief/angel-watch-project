@@ -1,0 +1,1289 @@
+[gd_scene load_steps=119 format=3 uid="uid://dcjvybi85ekqi"]
+
+[ext_resource type="Script" uid="uid://c7qk8xwblog81" path="res://main_game.gd" id="1_yx7mw"]
+[ext_resource type="Texture2D" uid="uid://dradx1v6cuve4" path="res://Main Resource/Room/Office/Office han .jpg" id="2_onx7j"]
+[ext_resource type="Script" uid="uid://6whp3yj3qdt3" path="res://camera_2d.gd" id="3_6bm6p"]
+[ext_resource type="Texture2D" uid="uid://7fkdhu4kk083" path="res://Main Resource/Room/Office/Office Light.png" id="3_ud73m"]
+[ext_resource type="Texture2D" uid="uid://84x6dix50cb3" path="res://Main Resource/Room/Office/office dark.png" id="4_5ngum"]
+[ext_resource type="Shader" uid="uid://chmi328my4ji5" path="res://Main Resource/Main Menu/Shaders/Remove_Black.gdshader" id="5_krmtw"]
+[ext_resource type="Texture2D" uid="uid://m0vmfu0ea6g5" path="res://Main Resource/Main Menu/12.png" id="6_jgkyn"]
+[ext_resource type="Texture2D" uid="uid://cnhrcnpt8coci" path="res://Main Resource/Main Menu/13.png" id="7_qpaub"]
+[ext_resource type="Texture2D" uid="uid://dfheljaww4ur1" path="res://Main Resource/Main Menu/14.png" id="8_an1vu"]
+[ext_resource type="Texture2D" uid="uid://boif1h8yblyb1" path="res://Main Resource/Main Menu/15.png" id="9_borgi"]
+[ext_resource type="Texture2D" uid="uid://d0kp3xoldkb3p" path="res://Main Resource/Main Menu/16.png" id="10_ih6an"]
+[ext_resource type="Texture2D" uid="uid://5twua820h2uf" path="res://Main Resource/Main Menu/17.png" id="11_umrn2"]
+[ext_resource type="Texture2D" uid="uid://eeuc1f1dmamb" path="res://Main Resource/Main Menu/18.png" id="12_2i4tw"]
+[ext_resource type="Texture2D" uid="uid://sm7twx8whkm5" path="res://Main Resource/Door and Vent/Vent Choose Close.png" id="13_b1687"]
+[ext_resource type="Texture2D" uid="uid://bwd403uuegw8y" path="res://Main Resource/Main Menu/20.png" id="13_euc45"]
+[ext_resource type="Texture2D" uid="uid://d4nhm5cg85e5y" path="res://Main Resource/Door and Vent/Vent Closed.png" id="13_iihm1"]
+[ext_resource type="Texture2D" uid="uid://jai7y1l7u6jr" path="res://Main Resource/Door and Vent/Vent Choose Open.png" id="14_6gv5k"]
+[ext_resource type="Texture2D" uid="uid://bqyo3rpg7ve7m" path="res://Main Resource/cam/Camera Arrow.png" id="14_jgkyn"]
+[ext_resource type="Texture2D" uid="uid://caivv8nl06owo" path="res://Main Resource/Door and Vent/Vent Open.png" id="14_o6vyx"]
+[ext_resource type="Texture2D" uid="uid://e1q6jkwaaioi" path="res://Main Resource/cam/cam1.png" id="16_2i4tw"]
+[ext_resource type="Script" uid="uid://2so46qsxowpn" path="res://camera_detection.gd" id="16_borgi"]
+[ext_resource type="Texture2D" uid="uid://cgwtreysqli2t" path="res://Main Resource/cam/Map_Big.png" id="16_o8ab5"]
+[ext_resource type="Texture2D" uid="uid://ppl6x6krqgwh" path="res://Main Resource/cam/cam2.png" id="17_euc45"]
+[ext_resource type="Texture2D" uid="uid://bkui08dlyockf" path="res://Main Resource/cam/cam3.png" id="18_vn0ol"]
+[ext_resource type="Texture2D" uid="uid://r6khrrf8h63y" path="res://Main Resource/cam/cam4.png" id="19_wt57k"]
+[ext_resource type="Texture2D" uid="uid://3e2l3dfb0pnb" path="res://Main Resource/cam/cam5.png" id="20_pk5u2"]
+[ext_resource type="Texture2D" uid="uid://egnwqpo60dwt" path="res://Main Resource/cam/example.jpg" id="21_euc45"]
+[ext_resource type="Texture2D" uid="uid://dxe0xk3efq6j6" path="res://Main Resource/cam/Main Hall.jpg" id="21_wt57k"]
+[ext_resource type="Script" uid="uid://b0kkx8ub3eami" path="res://cam_main_hall.gd" id="22_vn0ol"]
+[ext_resource type="Script" uid="uid://cld70k182nk8o" path="res://map.gd" id="23_u7wvl"]
+[ext_resource type="Texture2D" uid="uid://cko4n8ehelys6" path="res://Main Resource/Room/Exhibition Hall Sketch.png" id="25_31kh4"]
+[ext_resource type="Script" uid="uid://22laaimnahri" path="res://cam_exhibition_hall.gd" id="25_lght5"]
+[ext_resource type="Texture2D" uid="uid://djfspe8woe1aa" path="res://Main Resource/Room/Back Stage Sketch.png" id="27_31kh4"]
+[ext_resource type="Texture2D" uid="uid://c66snd1gxtcts" path="res://Main Resource/Room/Storage Sketch.png" id="29_5gq48"]
+[ext_resource type="Script" uid="uid://cxv6nfiwu7q0h" path="res://cam_back_stage.gd" id="29_o8ab5"]
+[ext_resource type="Script" uid="uid://qgwouv8g3ykp" path="res://cam_storage.gd" id="30_4cty2"]
+[ext_resource type="Texture2D" uid="uid://rfmdknsjl85e" path="res://Main Resource/Room/Basement Sketch.png" id="31_tle26"]
+[ext_resource type="Script" uid="uid://bvl2lt01rrqx" path="res://cam_basement.gd" id="32_nqusy"]
+[ext_resource type="Texture2D" uid="uid://c67vsveya5ixb" path="res://Main Resource/Room/Left Hall Sketch.png" id="33_b25i7"]
+[ext_resource type="Script" uid="uid://d23lyx112kcjc" path="res://cam_left_hall.gd" id="34_1dwal"]
+[ext_resource type="Texture2D" uid="uid://pajjbi161kal" path="res://Main Resource/Door and Vent/Right D 7.png" id="34_4j42i"]
+[ext_resource type="Texture2D" uid="uid://bxacej4s68qyk" path="res://Main Resource/Door and Vent/Right D 6.png" id="35_8jqmg"]
+[ext_resource type="Texture2D" uid="uid://djk8hhd6eui0n" path="res://Main Resource/Room/Right Hall Sketch.png" id="35_wgrv0"]
+[ext_resource type="Texture2D" uid="uid://b0r8dvk7i7e2h" path="res://Main Resource/Door and Vent/Right D 5.png" id="36_3cqky"]
+[ext_resource type="Texture2D" uid="uid://dmejpe0xl42pv" path="res://Main Resource/Door and Vent/Right D 4.png" id="36_5fp36"]
+[ext_resource type="Script" uid="uid://de6qevru7ely7" path="res://cam_right_hall.gd" id="36_ud73m"]
+[ext_resource type="Texture2D" uid="uid://ci7l6v4ha7053" path="res://Main Resource/Door and Vent/Right D 3.png" id="37_3cqky"]
+[ext_resource type="Script" uid="uid://lb65qmx0vchl" path="res://vent_control.gd" id="37_b1687"]
+[ext_resource type="Texture2D" uid="uid://dkmd14ufa7mqk" path="res://Main Resource/Door and Vent/Right D 2.png" id="38_bj7hs"]
+[ext_resource type="Texture2D" uid="uid://dlt8qgpvcsvcp" path="res://Main Resource/Door and Vent/Right D 1.png" id="39_q1j2l"]
+[ext_resource type="Texture2D" uid="uid://c36l1i4ixoada" path="res://Main Resource/Door and Vent/Right D 0.png" id="40_0etra"]
+[ext_resource type="Texture2D" uid="uid://dvcta7gck60di" path="res://Main Resource/Door and Vent/Light_Closed.png" id="42_564rt"]
+[ext_resource type="Script" uid="uid://c32gx7vnikkv" path="res://right_door_control.gd" id="42_bj7hs"]
+[ext_resource type="Texture2D" uid="uid://d2vq0c3ne5gum" path="res://Main Resource/Door and Vent/Left D 7.png" id="43_ra47l"]
+[ext_resource type="Texture2D" uid="uid://colklvs365wk1" path="res://Main Resource/Door and Vent/Light_Open.png" id="43_wvtnb"]
+[ext_resource type="Texture2D" uid="uid://c5acfjxn6xfua" path="res://Main Resource/Door and Vent/Left D 6.png" id="44_acj6b"]
+[ext_resource type="Texture2D" uid="uid://clg4sqifkk8p6" path="res://Main Resource/Door and Vent/Left D 5.png" id="45_564rt"]
+[ext_resource type="Texture2D" uid="uid://nbimwefshfnq" path="res://Main Resource/Door and Vent/Left D 4.png" id="46_wvtnb"]
+[ext_resource type="Texture2D" uid="uid://d18raft11g2i4" path="res://Main Resource/Door and Vent/Left D 3.png" id="47_5gq48"]
+[ext_resource type="Texture2D" uid="uid://dttkq7jeq4r44" path="res://Main Resource/Door and Vent/Left D 2.png" id="48_4cty2"]
+[ext_resource type="Texture2D" uid="uid://yfn0t5hjo4ow" path="res://Main Resource/Door and Vent/Left D 0.png" id="49_tle26"]
+[ext_resource type="Texture2D" uid="uid://bof36klbwbfxe" path="res://Main Resource/Door and Vent/Left D 1.png" id="50_nqusy"]
+[ext_resource type="Script" uid="uid://dreb1aljxgjjh" path="res://left_door_control.gd" id="51_b25i7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md87r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ud73m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ngum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ud73m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ngum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ud73m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ngum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ud73m")
+}, {
+"duration": 80.0,
+"texture": ExtResource("3_ud73m")
+}],
+"loop": true,
+"name": &"Blinking",
+"speed": 20.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vn0ol"]
+shader = ExtResource("5_krmtw")
+shader_parameter/strength = 0.051
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wt57k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jgkyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qpaub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_an1vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_borgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ih6an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_umrn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2i4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_euc45")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih6an"]
+size = Vector2(446, 109)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onx7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_o8ab5")
+}],
+"loop": true,
+"name": &"Exhibition Hall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_o8ab5")
+}],
+"loop": true,
+"name": &"Main_Hall",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_euc45"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wt57k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vn0ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_euc45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2i4tw")
+}],
+"loop": false,
+"name": &"backwards",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_2i4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_euc45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vn0ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wt57k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pk5u2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vn0ol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_wt57k")
+}],
+"loop": true,
+"name": &"Main_Hall  0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_euc45")
+}],
+"loop": true,
+"name": &"Main_Hall W",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_vn0ol"]
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.98, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-241, 0), Vector2(-2, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_euc45"]
+resource_name = "movecam"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-6.00009, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wt57k"]
+_data = {
+&"RESET": SubResource("Animation_vn0ol"),
+&"movecam": SubResource("Animation_euc45")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lght5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_31kh4")
+}],
+"loop": true,
+"name": &"Exhibition_Hall 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lght5"]
+resource_name = "Cam_Movement"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.01, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-242, 0), Vector2(-3.00003, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lfj8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ac0cv"]
+_data = {
+&"Cam_Movement": SubResource("Animation_lght5"),
+&"RESET": SubResource("Animation_lfj8l")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ac0cv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_31kh4")
+}],
+"loop": true,
+"name": &"Back_Stage 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_o8ab5"]
+resource_name = "Cam_Move"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.03, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-428, 0), Vector2(-9, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x5kvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x5kvo"]
+_data = {
+&"Cam_Move": SubResource("Animation_o8ab5"),
+&"RESET": SubResource("Animation_x5kvo")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tle26"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_5gq48")
+}],
+"loop": true,
+"name": &"Storage 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_nqusy"]
+resource_name = "Cam_Movement"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-451, 0), Vector2(-6, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b25i7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1dwal"]
+_data = {
+&"Cam_Movement": SubResource("Animation_nqusy"),
+&"RESET": SubResource("Animation_b25i7")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b25i7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_tle26")
+}],
+"loop": true,
+"name": &"Basement 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_1dwal"]
+resource_name = "Cam_Movement"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.99, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-439, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_31kh4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wgrv0"]
+_data = {
+&"Cam_Movement": SubResource("Animation_1dwal"),
+&"RESET": SubResource("Animation_31kh4")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqusy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_b25i7")
+}],
+"loop": true,
+"name": &"Left_Hall 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_wgrv0"]
+resource_name = "Cam_Movement"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.01, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-446, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ud73m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ngum"]
+_data = {
+&"Cam_Movement": SubResource("Animation_wgrv0"),
+&"RESET": SubResource("Animation_ud73m")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ngum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_wgrv0")
+}],
+"loop": true,
+"name": &"Right_Hall 0",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_5ngum"]
+resource_name = "Cam_Movement"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.99067, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-451, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_md87r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_047cl"]
+_data = {
+&"Cam_Movement": SubResource("Animation_5ngum"),
+&"RESET": SubResource("Animation_md87r")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wt57k"]
+shader = ExtResource("5_krmtw")
+shader_parameter/strength = 0.062
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pk5u2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jgkyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qpaub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_an1vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_borgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ih6an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_umrn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2i4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_euc45")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_cm266"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ac0cv"]
+gradient = SubResource("Gradient_cm266")
+
+[sub_resource type="Animation" id="Animation_oiatc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-214, -84)]
+}
+
+[sub_resource type="Animation" id="Animation_8u0te"]
+resource_name = "Scanline"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4, 4.28, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-272, -105), Vector2(-229, 768), Vector2(-1087.94, -621.007), Vector2(-236, -98)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mg3m2"]
+_data = {
+&"RESET": SubResource("Animation_oiatc"),
+&"Scanline": SubResource("Animation_8u0te")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5kvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_b1687")
+}],
+"loop": true,
+"name": &"Choose_Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_6gv5k")
+}],
+"loop": true,
+"name": &"Choose_Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_iihm1")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_o6vyx")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjvg0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wktgk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_4j42i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_8jqmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3cqky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5fp36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3cqky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bj7hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_q1j2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_0etra")
+}],
+"loop": false,
+"name": &"Closed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_0etra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_q1j2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bj7hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3cqky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_5fp36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_8jqmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4j42i")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5gq48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_564rt")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_wvtnb")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1j2l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0etra"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1dwal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_ra47l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_acj6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_564rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_wvtnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5gq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4cty2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_tle26")
+}],
+"loop": false,
+"name": &"Closed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_tle26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_nqusy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4cty2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5gq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_wvtnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_564rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ra47l")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_564rt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_564rt")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_wvtnb")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31kh4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgrv0"]
+
+[sub_resource type="Animation" id="Animation_x228s"]
+resource_name = "Fade_In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkloa"]
+resource_name = "Fade_Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2rpar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jxiwm"]
+_data = {
+&"Fade_In": SubResource("Animation_x228s"),
+&"Fade_Out": SubResource("Animation_jkloa"),
+&"RESET": SubResource("Animation_2rpar")
+}
+
+[node name="Main game" type="Node2D"]
+script = ExtResource("1_yx7mw")
+
+[node name="office" type="Sprite2D" parent="."]
+scale = Vector2(1.08722, 1.07007)
+texture = ExtResource("2_onx7j")
+centered = false
+
+[node name="Blinking_Office" type="AnimatedSprite2D" parent="office"]
+scale = Vector2(0.952387, 0.951388)
+sprite_frames = SubResource("SpriteFrames_md87r")
+animation = &"Blinking"
+autoplay = "Blinking"
+frame_progress = 0.71078
+centered = false
+
+[node name="Static" type="AnimatedSprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_vn0ol")
+scale = Vector2(1.325, 1.10833)
+sprite_frames = SubResource("SpriteFrames_wt57k")
+autoplay = "default"
+frame_progress = 0.531462
+centered = false
+
+[node name="GUI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Camera2D" type="Camera2D" parent="GUI" node_paths=PackedStringArray("officesprite")]
+anchor_mode = 0
+script = ExtResource("3_6bm6p")
+scrollarea = 450
+scrollspeed = 1000.0
+officesprite = NodePath("../../office")
+
+[node name="camera arrow" type="TextureRect" parent="GUI"]
+offset_left = 390.0
+offset_top = 545.0
+offset_right = 2310.0
+offset_bottom = 1625.0
+scale = Vector2(0.271795, 0.20951)
+texture = ExtResource("14_jgkyn")
+
+[node name="camera detection" type="Area2D" parent="GUI"]
+script = ExtResource("16_borgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GUI/camera detection"]
+position = Vector2(650, 677.5)
+shape = SubResource("RectangleShape2D_ih6an")
+
+[node name="Map" type="AnimatedSprite2D" parent="GUI"]
+position = Vector2(755, 218)
+scale = Vector2(0.545494, 0.534124)
+sprite_frames = SubResource("SpriteFrames_onx7j")
+animation = &"Main_Hall"
+centered = false
+script = ExtResource("23_u7wvl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/Map"]
+
+[node name="Buton_Main_Hall" type="Button" parent="GUI/Map"]
+offset_left = 370.307
+offset_top = 512.989
+offset_right = 398.307
+offset_bottom = 543.989
+scale = Vector2(2.31105, 2.13795)
+text = "C1"
+
+[node name="Button_Exhibition_Hall" type="Button" parent="GUI/Map"]
+offset_left = 526.129
+offset_top = 177.861
+offset_right = 554.129
+offset_bottom = 208.861
+scale = Vector2(2.31016, 2.06552)
+text = "C2"
+
+[node name="Button_Back_Stage" type="Button" parent="GUI/Map"]
+offset_left = 755.279
+offset_top = 322.023
+offset_right = 783.279
+offset_bottom = 353.023
+scale = Vector2(2.24749, 2.06514)
+text = "C3"
+
+[node name="Button_Storage" type="Button" parent="GUI/Map"]
+offset_left = 262.148
+offset_top = 250.878
+offset_right = 290.148
+offset_bottom = 281.878
+scale = Vector2(2.28878, 2.01584)
+text = "C4"
+
+[node name="Button_Basement" type="Button" parent="GUI/Map"]
+offset_left = 658.119
+offset_top = 106.717
+offset_right = 686.119
+offset_bottom = 137.717
+scale = Vector2(2.30959, 2.05271)
+text = "C5"
+
+[node name="Button_Left_Hall" type="Button" parent="GUI/Map"]
+offset_left = 467.466
+offset_top = 694.595
+offset_right = 495.466
+offset_bottom = 725.595
+scale = Vector2(2.25764, 2.05887)
+text = "C6"
+
+[node name="Button_Right_Hall" type="Button" parent="GUI/Map"]
+offset_left = 586.624
+offset_top = 694.595
+offset_right = 594.624
+offset_bottom = 702.595
+scale = Vector2(2.27401, 2.03933)
+text = "C7"
+
+[node name="Button_V1" type="Button" parent="GUI/Map"]
+offset_left = 298.812
+offset_top = 381.934
+offset_right = 326.812
+offset_bottom = 412.934
+scale = Vector2(1.36622, 0.895211)
+text = "V1"
+
+[node name="Button_V2" type="Button" parent="GUI/Map"]
+offset_left = 755.279
+offset_top = 479.289
+offset_right = 763.279
+offset_bottom = 487.289
+scale = Vector2(1.39335, 0.918187)
+text = "V2"
+
+[node name="Button_V3" type="Button" parent="GUI/Map"]
+offset_left = 562.793
+offset_top = 599.112
+offset_right = 570.793
+offset_bottom = 607.112
+scale = Vector2(1.36007, 0.833487)
+text = "V3"
+
+[node name="Panel" type="AnimatedSprite2D" parent="GUI"]
+position = Vector2(695, 360.879)
+scale = Vector2(0.736458, 0.692369)
+sprite_frames = SubResource("SpriteFrames_euc45")
+animation = &"backwards"
+frame = 7
+frame_progress = 1.0
+
+[node name="camera" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Cam_Main_Hall" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(0.8, 0.676852)
+sprite_frames = SubResource("SpriteFrames_vn0ol")
+animation = &"Main_Hall W"
+frame_progress = 0.512487
+centered = false
+script = ExtResource("22_vn0ol")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Main_Hall"]
+libraries = {
+&"": SubResource("AnimationLibrary_wt57k")
+}
+autoplay = "RESET"
+
+[node name="Cam_Exhibition_Hall" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(1.12492, 0.71701)
+sprite_frames = SubResource("SpriteFrames_lght5")
+animation = &"Exhibition_Hall 0"
+frame_progress = 0.177721
+centered = false
+script = ExtResource("25_lght5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Exhibition_Hall"]
+libraries = {
+&"": SubResource("AnimationLibrary_ac0cv")
+}
+autoplay = "Cam_Movement"
+
+[node name="Cam_Back_Stage" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(1.11763, 0.711596)
+sprite_frames = SubResource("SpriteFrames_ac0cv")
+animation = &"Back_Stage 0"
+frame_progress = 0.239787
+centered = false
+script = ExtResource("29_o8ab5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Back_Stage"]
+libraries = {
+&"": SubResource("AnimationLibrary_x5kvo")
+}
+autoplay = "Cam_Move"
+
+[node name="Cam_Storage" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(1.1312, 0.724969)
+sprite_frames = SubResource("SpriteFrames_tle26")
+animation = &"Storage 0"
+centered = false
+script = ExtResource("30_4cty2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Storage"]
+libraries = {
+&"": SubResource("AnimationLibrary_1dwal")
+}
+autoplay = "Cam_Movement"
+
+[node name="Cam_Basement" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(1.12969, 0.713608)
+sprite_frames = SubResource("SpriteFrames_b25i7")
+animation = &"Basement 0"
+centered = false
+script = ExtResource("32_nqusy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Basement"]
+libraries = {
+&"": SubResource("AnimationLibrary_wgrv0")
+}
+autoplay = "Cam_Movement"
+
+[node name="Cam_Left_Hall" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(0.90396, 0.68187)
+sprite_frames = SubResource("SpriteFrames_nqusy")
+animation = &"Left_Hall 0"
+centered = false
+script = ExtResource("34_1dwal")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Left_Hall"]
+libraries = {
+&"": SubResource("AnimationLibrary_5ngum")
+}
+autoplay = "Cam_Movement"
+
+[node name="Cam_Right_Hall" type="AnimatedSprite2D" parent="camera"]
+visible = false
+scale = Vector2(0.907058, 0.691124)
+sprite_frames = SubResource("SpriteFrames_5ngum")
+animation = &"Right_Hall 0"
+centered = false
+script = ExtResource("36_ud73m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Cam_Right_Hall"]
+libraries = {
+&"": SubResource("AnimationLibrary_047cl")
+}
+autoplay = "Cam_Movement"
+
+[node name="Static" type="AnimatedSprite2D" parent="camera"]
+visible = false
+material = SubResource("ShaderMaterial_wt57k")
+scale = Vector2(1.35703, 1.06528)
+sprite_frames = SubResource("SpriteFrames_pk5u2")
+autoplay = "default"
+frame_progress = 0.175502
+centered = false
+
+[node name="Scanline" type="Sprite2D" parent="camera"]
+visible = false
+modulate = Color(1, 1, 1, 0.117647)
+position = Vector2(-214, -84)
+scale = Vector2(33.8086, 1.03914)
+texture = SubResource("GradientTexture2D_ac0cv")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera/Scanline"]
+libraries = {
+&"": SubResource("AnimationLibrary_mg3m2")
+}
+autoplay = "Scanline"
+
+[node name="Vent" type="AnimatedSprite2D" parent="."]
+position = Vector2(364, -2)
+scale = Vector2(0.157591, 0.170263)
+sprite_frames = SubResource("SpriteFrames_x5kvo")
+animation = &"Open"
+centered = false
+
+[node name="Vent_Control" type="Area2D" parent="Vent"]
+script = ExtResource("37_b1687")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vent/Vent_Control"]
+position = Vector2(597.712, 416.301)
+scale = Vector2(63.159, 36.5981)
+shape = SubResource("RectangleShape2D_pjvg0")
+
+[node name="Right_Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(1590, 215)
+scale = Vector2(0.263737, 0.274919)
+sprite_frames = SubResource("SpriteFrames_wktgk")
+animation = &"Closed"
+autoplay = "Open"
+centered = false
+
+[node name="Light_Button" type="AnimatedSprite2D" parent="Right_Door"]
+modulate = Color(1, 1, 1, 0.435294)
+position = Vector2(-94.7916, 560.165)
+scale = Vector2(0.137401, 0.146375)
+sprite_frames = SubResource("SpriteFrames_5gq48")
+animation = &"Closed"
+autoplay = "Open"
+
+[node name="Right_Door_Control" type="Node2D" parent="Right_Door"]
+script = ExtResource("42_bj7hs")
+
+[node name="R_D_Open_Button" type="Area2D" parent="Right_Door/Right_Door_Control"]
+
+[node name="Right_Button_Open" type="CollisionShape2D" parent="Right_Door/Right_Door_Control/R_D_Open_Button"]
+position = Vector2(-98.5829, 476.504)
+scale = Vector2(-6.08593, 5.44602)
+shape = SubResource("RectangleShape2D_q1j2l")
+
+[node name="R_D_Closed_Button" type="Area2D" parent="Right_Door/Right_Door_Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Door/Right_Door_Control/R_D_Closed_Button"]
+position = Vector2(-90.9996, 622.001)
+scale = Vector2(6.60813, 4.92881)
+shape = SubResource("RectangleShape2D_0etra")
+
+[node name="Left_Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(-204, 200)
+scale = Vector2(0.346675, 0.284517)
+sprite_frames = SubResource("SpriteFrames_1dwal")
+animation = &"Closed"
+autoplay = "Open"
+centered = false
+
+[node name="Light_Button" type="AnimatedSprite2D" parent="Left_Door"]
+modulate = Color(1, 1, 1, 0.447059)
+position = Vector2(1188.43, 692.401)
+scale = Vector2(0.124889, 0.139192)
+sprite_frames = SubResource("SpriteFrames_564rt")
+animation = &"Open"
+autoplay = "Open"
+
+[node name="Left_Door_Control" type="Node2D" parent="Left_Door"]
+script = ExtResource("51_b25i7")
+
+[node name="L_D_Open_Button" type="Area2D" parent="Left_Door/Left_Door_Control"]
+
+[node name="Left_Button_Open" type="CollisionShape2D" parent="Left_Door/Left_Door_Control/L_D_Open_Button"]
+position = Vector2(1179.78, 608.048)
+scale = Vector2(6.06118, 5.67599)
+shape = SubResource("RectangleShape2D_31kh4")
+
+[node name="L_D_Closed_Button" type="Area2D" parent="Left_Door/Left_Door_Control"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Door/Left_Door_Control/L_D_Closed_Button"]
+position = Vector2(1185.55, 755.666)
+scale = Vector2(6.04993, 6.4903)
+shape = SubResource("RectangleShape2D_wgrv0")
+
+[node name="Fade_Transition" type="ColorRect" parent="."]
+visible = false
+offset_right = 1702.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 0)
+
+[node name="Fade_Animation" type="AnimationPlayer" parent="Fade_Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_jxiwm")
+}
+
+[node name="Male_Walker_AI" type="Node2D" parent="."]
+
+[node name="Female_Walker_AI" type="Node2D" parent="."]
+
+[node name="Watcher_AI" type="Node2D" parent="."]
+
+[node name="Hider_AI" type="Node2D" parent="."]
+
+[connection signal="pressed" from="GUI/Map/Buton_Main_Hall" to="GUI/Map" method="_on_buton_main_hall_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Exhibition_Hall" to="GUI/Map" method="_on_button_exhibition_hall_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Back_Stage" to="GUI/Map" method="_on_button_back_stage_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Storage" to="GUI/Map" method="_on_button_storage_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Basement" to="GUI/Map" method="_on_button_basement_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Left_Hall" to="GUI/Map" method="_on_button_left_hall_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_Right_Hall" to="GUI/Map" method="_on_button_right_hall_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_V1" to="GUI/Map" method="_on_button_v_1_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_V2" to="GUI/Map" method="_on_button_v_2_pressed"]
+[connection signal="pressed" from="GUI/Map/Button_V3" to="GUI/Map" method="_on_button_v_3_pressed"]
+[connection signal="animation_finished" from="GUI/Panel" to="GUI/camera detection" method="_on_panel_animation_finished"]
+[connection signal="input_event" from="Vent/Vent_Control" to="Vent/Vent_Control" method="_on_input_event"]
+[connection signal="input_event" from="Right_Door/Right_Door_Control/R_D_Open_Button" to="Right_Door/Right_Door_Control" method="_on_r_d_open_button_input_event"]
+[connection signal="input_event" from="Right_Door/Right_Door_Control/R_D_Closed_Button" to="Right_Door/Right_Door_Control" method="_on_r_d_closed_button_input_event"]
+[connection signal="input_event" from="Left_Door/Left_Door_Control/L_D_Open_Button" to="Left_Door/Left_Door_Control" method="_on_l_d_open_button_input_event"]
+[connection signal="input_event" from="Left_Door/Left_Door_Control/L_D_Closed_Button" to="Left_Door/Left_Door_Control" method="_on_l_d_closed_button_input_event"]
+[connection signal="animation_finished" from="Fade_Transition/Fade_Animation" to="." method="_on_fade_animation_animation_finished"]

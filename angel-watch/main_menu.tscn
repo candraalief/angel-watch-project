@@ -1,0 +1,165 @@
+[gd_scene load_steps=23 format=3 uid="uid://xit0yysc8473"]
+
+[ext_resource type="Script" uid="uid://bsaeosvl1fumk" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://d0hg5qdcbgmv4" path="res://Main Resource/Main Menu/Main menu.jpg" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://b0cvr2gc82nwf" path="res://Main Resource/Main Menu/Button.png" id="3_jix8l"]
+[ext_resource type="Texture2D" uid="uid://78ied6qowkav" path="res://Main Resource/Main Menu/Quit Button.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://cnb7u1n7bg77" path="res://Main Resource/Main Menu/Quit_start.png" id="4_nlkkf"]
+[ext_resource type="PackedScene" uid="uid://5p1dht1so4xr" path="res://Fade_Transition.tscn" id="5_glbon"]
+[ext_resource type="Shader" uid="uid://chmi328my4ji5" path="res://Main Resource/Main Menu/Shaders/Remove_Black.gdshader" id="6_cm266"]
+[ext_resource type="Texture2D" uid="uid://m0vmfu0ea6g5" path="res://Main Resource/Main Menu/12.png" id="7_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://cnhrcnpt8coci" path="res://Main Resource/Main Menu/13.png" id="8_8u0te"]
+[ext_resource type="Texture2D" uid="uid://dfheljaww4ur1" path="res://Main Resource/Main Menu/14.png" id="9_oiatc"]
+[ext_resource type="Texture2D" uid="uid://boif1h8yblyb1" path="res://Main Resource/Main Menu/15.png" id="10_mg3m2"]
+[ext_resource type="Texture2D" uid="uid://d0kp3xoldkb3p" path="res://Main Resource/Main Menu/16.png" id="11_ojb7r"]
+[ext_resource type="Texture2D" uid="uid://5twua820h2uf" path="res://Main Resource/Main Menu/17.png" id="12_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://eeuc1f1dmamb" path="res://Main Resource/Main Menu/18.png" id="13_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://bwd403uuegw8y" path="res://Main Resource/Main Menu/20.png" id="14_saq78"]
+
+[sub_resource type="Gradient" id="Gradient_cm266"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g8g3n"]
+gradient = SubResource("Gradient_cm266")
+
+[sub_resource type="Animation" id="Animation_g8g3n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1061.3, -628.321)]
+}
+
+[sub_resource type="Animation" id="Animation_cm266"]
+resource_name = "Scan_main_menu"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 9.982, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1061.3, -628.321), Vector2(-1061.3, 597.498), Vector2(-1061.3, -651.726)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8u0te"]
+_data = {
+&"RESET": SubResource("Animation_g8g3n"),
+&"Scan_main_menu": SubResource("Animation_cm266")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uw0o"]
+shader = ExtResource("6_cm266")
+shader_parameter/strength = 0.197
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ql5ya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_g8g3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8u0te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oiatc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mg3m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ojb7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e5qqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7bbuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_saq78")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Main Menu" type="Node2D"]
+scale = Vector2(1.1107, 1.10361)
+script = ExtResource("1_7vrkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 328.5)
+scale = Vector2(0.608333, 0.619444)
+texture = ExtResource("2_fu7sn")
+
+[node name="Scanline2" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0.117647)
+position = Vector2(-1061.3, -628.321)
+scale = Vector2(33.8086, 1.03914)
+texture = SubResource("GradientTexture2D_g8g3n")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Scanline2"]
+libraries = {
+&"": SubResource("AnimationLibrary_8u0te")
+}
+autoplay = "Scan_main_menu"
+
+[node name="Static" type="AnimatedSprite2D" parent="Sprite2D"]
+material = SubResource("ShaderMaterial_8uw0o")
+position = Vector2(-951.781, -530.314)
+scale = Vector2(1.50195, 1.51471)
+sprite_frames = SubResource("SpriteFrames_ql5ya")
+autoplay = "default"
+frame_progress = 0.791454
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 303.0
+offset_right = 2000.0
+offset_bottom = 1383.0
+scale = Vector2(0.161454, 0.101576)
+texture_normal = ExtResource("3_jix8l")
+texture_hover = ExtResource("4_nlkkf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 430.0
+offset_right = 2023.0
+offset_bottom = 1510.0
+scale = Vector2(0.132947, 0.0947414)
+texture_normal = ExtResource("4_glbon")
+metadata/_edit_use_anchors_ = true
+
+[node name="Fade_Transition" parent="." instance=ExtResource("5_glbon")]
+visible = false
+
+[node name="Fade_Timer" type="Timer" parent="Fade_Transition"]
+
+[connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Fade_Transition/Fade_Timer" to="." method="_on_fade_timer_timeout"]
